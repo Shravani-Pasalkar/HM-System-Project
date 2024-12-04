@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Hospital Management System</h1>
+
+        <!-- Tabs for navigation -->
+        <div class="tabs">
+            <button class="tab-button" onclick="showTab('patients')">Manage Patients</button>
+            <button class="tab-button" onclick="showTab('doctors')">Manage Doctors</button>
+        </div>
+
+        <!-- Patients Section -->
+        <div id="patients" class="tab-content">
+            <h2>Patient Management</h2>
+            <form id="patientForm">
+                <input type="text" id="patientName" placeholder="Patient Name" required>
+                <input type="number" id="patientAge" placeholder="Patient Age" required>
+                <input type="text" id="patientDisease" placeholder="Patient Disease" required>
+                <button type="submit">Add Patient</button>
+            </form>
+
+            <table id="patientsTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Disease</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Doctors Section -->
+        <div id="doctors" class="tab-content">
+            <h2>Doctor Management</h2>
+            <form id="doctorForm">
+                <input type="text" id="doctorName" placeholder="Doctor Name" required>
+                <input type="text" id="doctorSpecialization" placeholder="Specialization" required>
+                <input type="number" id="doctorExperience" placeholder="Experience (Years)" required>
+                <button type="submit">Add Doctor</button>
+            </form>
+
+            <table id="doctorsTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Specialization</th>
+                        <th>Experience</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
